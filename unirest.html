@@ -1,12 +1,111 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
     <title>Document</title>
 </head>
-<body>
+
+<body class="bg-gray-800">
+    <div class="flex justify-center space-x-4">
+        <button
+            class="text-gray-100 w-32 px-4 py-2 bg-gray-600 rounded-md mt-12 hover:bg-gray-500 transition-all ease-in-out duration-300">Get
+            All</button>
+        <button
+            class="text-gray-100 w-32 px-4 py-2 bg-gray-600 rounded-md mt-12 hover:bg-gray-500 transition-all ease-in-out duration-300">Take
+            10</button>
+        <button onclick="get()"
+            class="text-gray-100 w-32 px-4 py-2 bg-gray-600 rounded-md mt-12 hover:bg-gray-500 transition-all ease-in-out duration-300">Filter
+            by M</button>
+    </div>
+    <div class="flex flex-col overflow-hidden m-2 rounded-md">
+        <div class="overflow-hidden rounded-md">
+            <div class="py-2 align-middle inline-block min-w-full rounded-md">
+                <div class=" shadow overflow-hidden border-b border-gray-200 rounded-md">
+                    <table class="min-w-full divide-y divide-gray-200">
+                        <thead class="bg-gray-50">
+                            <tr>
+                                <th scope="col"
+                                    class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                                    #ID
+                                </th>
+                                <th scope="col"
+                                    class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                                    Title
+                                </th>
+                                <th scope="col"
+                                    class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                                    Cuisine
+                                </th>
+                                <th scope="col"
+                                    class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                                    Instruction
+                                </th>
+                                <th scope="col"
+                                    class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                                    Ready Time
+                                </th>
+                                <th scope="col" class="relative px-6 py-3">
+                                    <span class="sr-only">Edit</span>
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody id="app" class="bg-white divide-y divide-gray-200">
+                            <tr>
+                                <td class="px-6 py-4 whitespace-nowrap">
+                                    <div class="flex items-center">
+                                        <div class="flex-shrink-0 h-10 w-10">
+                                            <img class="h-10 w-10 rounded-full"
+                                                src="https://via.placeholder.com/728x90.png?text=Visit+WhoIsHostingThis.com+Buyers+Guide"
+                                                alt="" />
+                                        </div>
+                                        <div class="ml-4">
+                                            <div class="text-sm font-medium text-gray-900">
+                                                ${element.id}
+                                            </div>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td class="px-6 py-4 whitespace-nowrap">
+                                    <div class="text-sm text-gray-900">
+                                        ${ startsWithM ? element.title : "" }
+                                    </div>
+                                </td>
+                                <td class="px-6 py-4 whitespace-nowrap">
+                                    <div class="text-sm text-gray-900">
+                                        ${element.cuisines}
+                                    </div>
+                                </td>
+                                <td class="px-6 py-4 whitespace-nowrap">
+                                    <span
+                                        class="px-2 inline-flex text-xs leading-5 font-semibold rounded-full bg-green-100 text-green-800">
+                                        Online
+                                    </span>
+                                </td>
+                                <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
+                                    ${element.readyInMinutes}
+                                </td>
+                                <td class="space-x-4 px-2 whitespace-nowrap text-right text-sm font-medium">
+                                    <a href="edit"
+                                        class="text-green-500 hover:text-green-700 px-4 py-2 rounded-md hover:bg-green-100">
+                                        Edit
+                                    </a>
+                                    <a href="/"
+                                        class="text-red-500 hover:text-red-700 px-4 py-2 rounded-md hover:bg-red-100">
+                                        Delete
+                                    </a>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
     <script src="Listing2.js"></script>
 </body>
+
 </html>
