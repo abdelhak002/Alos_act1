@@ -56,10 +56,10 @@ async function getAll() {
   app.innerHTML = template;
   console.log(data);
 }
-async function getTen() {
+async function getTen(count) {
   var app = document.getElementById("app");
   let template = "";
-  const api = "http://localhost:3000/recipes?_limit=10";
+  const api = "http://localhost:3000/recipes?_limit='${}'";
   const response = await fetch(api);
   const data = await response.json();
   data.forEach((element) => {
