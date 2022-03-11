@@ -16,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/abdelhak002/Alos_act1/issues"
   },
-  "homepage": "https://github.com/abdelhak002/Alos_act1#readme"
+  "homepage": "https://github.com/abdelhak002/Alos_act1#readme",
+  "dependencies": {
+    "unirest": "^0.6.0"
+  }
 }
