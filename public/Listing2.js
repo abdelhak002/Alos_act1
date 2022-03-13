@@ -1,13 +1,4 @@
-// var Request = unirest.get('http://localhost:3000/recipes')
-// var Request = unirest.get('unirest');
-//   var req = unirest("GET","http://localhost:3000/recipes")
-// req.headers({
-//     "cache-control":"no-cache",
-// })
-// req.end(function (res){
-//     if(res.error) throw new error (res.error)
-//     console.log(res.body)
-// })
+// Get All Data
 async function getAll() {
   var app = document.getElementById("app");
   let template = "";
@@ -56,6 +47,8 @@ async function getAll() {
   app.innerHTML = template;
   console.log(data);
 }
+
+// Get the first 10 records of the data
 async function getTen() {
   var app = document.getElementById("app");
   let template = "";
@@ -104,6 +97,8 @@ async function getTen() {
   app.innerHTML = template;
   console.log(data);
 }
+
+// Filter by title starting with "M"
 async function filterByM() {
   var app = document.getElementById("app");
   let template = "";
