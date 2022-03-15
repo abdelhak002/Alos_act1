@@ -46,7 +46,7 @@ GET single record [http://localhost:3000/recipes/{id}](http://localhost:3000/rec
 
 ## The Used Method
 
-we use pure JavaScript to fetch the data.
+we used pure JavaScript to fetch the data.
 
 in `Listing2.js` file you will find three methods `getAll()`, `getTen()`, `filterByM()`
 each method has the following code:
@@ -62,3 +62,8 @@ async function funName(){
   data.forEach((item) => {console.log(item.element)}) // we take the data object and loop through its elements and print out the desiered element.
 }
 ```
+
+> ## **Note**: We used an `index.html` file to display the data.
+
+> ## **Note**: The style we used is from the CSS Framework `Tailwindcss` CDN, It needs iternet connection to function. 
+
