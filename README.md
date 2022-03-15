@@ -18,8 +18,16 @@ clone the repository
 git clone https://github.com/abdelhak002/Alos_act1.git
 ```
 
-```
+enter the folder
+
+```bash
 cd Alos_act1
+```
+
+install the packages
+
+```bash
+npm install
 ```
 
 ## **Start server**
@@ -63,7 +71,6 @@ async function funName(){
 }
 ```
 
-> ## **Note**: We used an `index.html` file to display the data.
+> **Note**: We used an `index.html` file to display the data.
 
-> ## **Note**: The style we used is from the CSS Framework `Tailwindcss` CDN, It needs iternet connection to function. 
-
+> **Note**: The style we used is from the CSS Framework `Tailwindcss` CDN, It needs iternet connection to function.
