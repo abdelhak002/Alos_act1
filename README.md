@@ -61,7 +61,7 @@ each method has the following code:
 
 ```JavaScript
 async function funName(){
-  const api = "http://localhost:3000/recipes";
+  const api = "http://localhost:3000/recipes"; // store the endpoint in constant variable.
 
   const response = await fetch(api); // the fetch() function get the data of that endpoint and store it in a constant variable called response.
 
