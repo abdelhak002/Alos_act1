@@ -5,38 +5,38 @@ async function getAll() {
   const api = "http://localhost:3000/recipes";
   const response = await fetch(api);
   const data = await response.json();
-  data.forEach((element) => {
+  data.forEach((item) => {
     template += `
     
     <tr>
         <td class="px-4 py-4 whitespace-normal text-gray-700"">
             <div class="flex items-center">
                 <div class="text-sm font-medium text-gray-900">
-                    ${element.id}
+                    ${item.id}
                 </div>
             </div>
         </td>
         <td class="px-4 py-4 whitespace-nowrap text-gray-700"">
             <div class="text-sm text-gray-900">
-                ${element.title}
+                ${item.title}
             </div>
         </td>
         <td class="px-4 py-4 whitespace-normal text-gray-700"">
             <div class="text-sm text-gray-900">
-                ${element.cuisines}
+                ${item.cuisines}
             </div>
         </td>
         <td class="px-4 py-4 whitespace-normal text-sm text-gray-700">
-                ${element.instructions}
+                ${item.instructions}
         </td>
         <td class="px-4 py-4 whitespace-normal text-sm text-gray-700">
             <span
                 class="px-2 inline-flex text-xs leading-5 font-semibold rounded-full bg-green-100 text-green-800 text-ellipsis">
-              ${element.readyInMinutes}
+              ${item.readyInMinutes}
             </span>
         </td>
         <td class="px-2 whitespace-normal text-right text-sm font-medium">
-            <a href="/recipes/${element.id}"
+            <a href="/recipes/${item.id}"
                 class="text-blue-500 hover:text-blue-700 px-4 py-2 rounded-md hover:bg-blue-100">
                 Show
             </a>
@@ -55,38 +55,38 @@ async function getTen() {
   const api = "http://localhost:3000/recipes?_limit=10";
   const response = await fetch(api);
   const data = await response.json();
-  data.forEach((element) => {
+  data.forEach((item) => {
     template += `
     
     <tr>
         <td class="px-4 py-4 whitespace-normal text-gray-700"">
             <div class="flex items-center">
                 <div class="text-sm font-medium text-gray-900">
-                    ${element.id}
+                    ${item.id}
                 </div>
             </div>
         </td>
         <td class="px-4 py-4 whitespace-nowrap text-gray-700"">
             <div class="text-sm text-gray-900">
-                ${element.title}
+                ${item.title}
             </div>
         </td>
         <td class="px-4 py-4 whitespace-normal text-gray-700"">
             <div class="text-sm text-gray-900">
-                ${element.cuisines}
+                ${item.cuisines}
             </div>
         </td>
         <td class="px-4 py-4 whitespace-normal text-sm text-gray-700">
-                ${element.instructions}
+                ${item.instructions}
         </td>
         <td class="px-4 py-4 whitespace-normal text-sm text-gray-700">
             <span
                 class="px-2 inline-flex text-xs leading-5 font-semibold rounded-full bg-green-100 text-green-800 text-ellipsis">
-              ${element.readyInMinutes}
+              ${item.readyInMinutes}
             </span>
         </td>
         <td class="px-2 whitespace-normal text-right text-sm font-medium">
-            <a href="/recipes/${element.id}"
+            <a href="/recipes/${item.id}"
                 class="text-blue-500 hover:text-blue-700 px-4 py-2 rounded-md hover:bg-blue-100">
                 Show
             </a>
@@ -105,8 +105,8 @@ async function filterByM() {
   const api = "http://localhost:3000/recipes?title_like=M";
   const response = await fetch(api);
   const data = await response.json();
-  data.forEach((element) => {
-    var titlle = element.title;
+  data.forEach((item) => {
+    var titlle = item.title;
     var startsWithM = titlle.startsWith("M");
     if (startsWithM) {
       template += `
@@ -114,31 +114,31 @@ async function filterByM() {
         <td class="px-4 py-4 whitespace-normal text-gray-700"">
             <div class="flex items-center">
                 <div class="text-sm font-medium text-gray-900">
-                    ${element.id}
+                    ${item.id}
                 </div>
             </div>
         </td>
         <td class="px-4 py-4 whitespace-nowrap text-gray-700"">
             <div class="text-sm text-gray-900">
-                ${element.title}
+                ${item.title}
             </div>
         </td>
         <td class="px-4 py-4 whitespace-normal text-gray-700"">
             <div class="text-sm text-gray-900">
-                ${element.cuisines}
+                ${item.cuisines}
             </div>
         </td>
         <td class="px-4 py-4 whitespace-normal text-sm text-gray-700">
-                ${element.instructions}
+                ${item.instructions}
         </td>
         <td class="px-4 py-4 whitespace-normal text-sm text-gray-700">
             <span
                 class="px-2 inline-flex text-xs leading-5 font-semibold rounded-full bg-green-100 text-green-800 text-ellipsis">
-              ${element.readyInMinutes}
+              ${item.readyInMinutes}
             </span>
         </td>
         <td class="px-2 whitespace-normal text-right text-sm font-medium">
-            <a href="/recipes/${element.id}"
+            <a href="/recipes/${item.id}"
                 class="text-blue-500 hover:text-blue-700 px-4 py-2 rounded-md hover:bg-blue-100">
                 Show
             </a>

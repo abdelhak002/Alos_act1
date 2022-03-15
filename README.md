@@ -15,6 +15,7 @@ start the server in development mode by running the cmmnade
 ```basg
 npm run watch
 ```
+## visit [http://localhost:3000](http://localhost:3000) 
 
 ## Informations
 
@@ -35,4 +36,4 @@ req.headers({
   "cache-control": "no-cache",
 })
 ```
-- We used the `"no-cache"` response to check for content updates while reusing stored content  
+- The `no-cache` response directive indicates that the response can be stored in caches, but the response must be validated with the origin server before each reuse, even when the cache is disconnected from the origin server.  
